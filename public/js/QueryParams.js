@@ -8,7 +8,8 @@ function getQueryVariable(variable){
        // console.log(variable+":"+decodeURIComponent(pair[0]));
         if(decodeURIComponent(pair[0])==variable){
             //console.log("returning:"+pair[0]+" :"+pair[1]);
-            return decodeURIComponent(pair[1]);
+            return decodeURIComponent(pair[1].replace(/\+/g, ' '));
+            
         }
     }
     return undefined;
